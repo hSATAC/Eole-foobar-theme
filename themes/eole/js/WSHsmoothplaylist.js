@@ -5,7 +5,7 @@
     lockOnNowPlaying: window.GetProperty("lock on now playing playlist", true),
     lockOnPlaylistNamed: window.GetProperty("lock on specific playlist name", ""),	
     tf_albumartist: fb.TitleFormat("%album artist%"),
-    tf_groupkey: fb.TitleFormat("$if2(%album%[' - Disc '%discnumber%],$if(%length%,'?',%path%)) ^^ $if2(%album artist%,$if(%length%,'Unknown artist(s)',%title%)) ^^ %discnumber% ## $if2(%artist%,$if(%length%,'Unknown artist',%path%)) ^^ %title% ^^ [%genre%] ^^ [%date%]"),
+    tf_groupkey: fb.TitleFormat("$if2(%album%[' - Disc '%discnumber%],$if(%length%,'?',%path%)) ^^ $if2(%album%[' - Disc '%discnumber%],$if(%length%,'?',%path%)) ^^ %discnumber% ## $if2(%album%[' - Disc '%discnumber%],$if(%length%,'?',%path%)) ^^ %title% ^^ [%genre%] ^^ [%date%]"),
     tf_track: fb.TitleFormat("%tracknumber% ^^ $if(%length%,%length%,ON AIR) ^^ $if2(%rating%,0) ^^ %mood%"),
     tf_path: fb.TitleFormat("$directory_path(%path%)\\"),
     tf_time_remaining: fb.TitleFormat("$if(%length%,-%playback_time_remaining%,'ON AIR')"),
