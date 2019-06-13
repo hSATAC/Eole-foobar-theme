@@ -3867,6 +3867,9 @@ oBrowser = function(name) {
 				this.groups[i].tracktype = TrackType(this.list[k].RawPath.substring(0, 4));
 				
 				if(properties.TFgrouping.length > 0) {
+					groupinfos = TF.groupinfos.EvalWithMetadb(this.list[k]);
+					groupinfos = groupinfos.split(" ^^ ");	
+					this.groups[i].discnb = groupinfos[2];
 					this.groups[i].artist = TF.albumartist.EvalWithMetadb(this.list[k]);
 					this.groups[i].album = TF.album.EvalWithMetadb(this.list[k]);
 					this.groups[i].genre = TF.genre.EvalWithMetadb(this.list[k]);
